@@ -16,6 +16,13 @@ gem 'puma', '~> 3.11'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+gem 'administrate'
+gem 'devise', github: "plataformatec/devise"
+gem 'devise-jwt'
+gem 'faraday'
+gem 'fast_jsonapi'
+gem 'rack-cors'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
