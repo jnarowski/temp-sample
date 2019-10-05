@@ -26,6 +26,11 @@ Devise.setup do |config|
   # Configure the parent class responsible to send e-mails.
   # config.parent_mailer = 'ActionMailer::Base'
 
+  config.jwt do |jwt|
+    jwt.expiration_time = 30.days
+    jwt.secret = ENV.fetch('DEVISE_JWT_SECRET_KEY') { 'db70e50ec08feabaa1f05c65dadfc8057fb774052ff8fe7bc90b6d4001bfb681bbd6c26fbf06b77f39078270093948a5fd9ea09fac495fc9f7aab43241836dcf' }
+  end
+
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default) and
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
